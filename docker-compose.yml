@@ -7,7 +7,7 @@ services:
       dockerfile: ./dockerfile/Dockerfile
     container_name: laravel_sandbox_php
     volumes:
-      - ./:/var/www/html
+      - ./src:/var/www/html
       - ./php.ini:/usr/local/etc/php/php.ini
     ports:
       - '8000:8000'

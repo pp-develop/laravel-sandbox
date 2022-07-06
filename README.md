@@ -12,6 +12,9 @@ $ php artisan serve --host=0.0.0.0 --port=8000
 
 ## Features
 ### xdebug setting for VSCode
+
+install [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
+
 /.vscode/launch.json
 ```
 {
@@ -30,9 +33,9 @@ $ php artisan serve --host=0.0.0.0 --port=8000
 }
 ```
 Referens  
-launch.json attribute
+launch.json attribute  
 https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes  
-attribute pathMappings  
+about pathMappings  
 https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug  
 
 /php.ini  

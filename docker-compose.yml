@@ -2,13 +2,11 @@ version: '3.9'
 services:
   php:
     image: php:v1
-    build:
-      context: .
-      dockerfile: ./dockerfile/Dockerfile
+    build: ./dockerfile/php
     container_name: laravel_sandbox_php
     volumes:
       - ./src:/var/www/html
-      - ./php.ini:/usr/local/etc/php/php.ini
+      - ./dockerfile/php/php.ini:/usr/local/etc/php/php.ini
     ports:
       - '8000:8000'
 

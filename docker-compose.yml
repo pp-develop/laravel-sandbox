@@ -3,7 +3,7 @@ services:
   php:
     image: php:v1
     build: ./dockerfile/php
-    container_name: laravel_sandbox_php
+    container_name: docker-laravel_php
     volumes:
       - ./src:/var/www/html
       - ./dockerfile/php/php.ini:/usr/local/etc/php/php.ini
@@ -12,7 +12,7 @@ services:
 
   mysql:
     image: mysql:8
-    container_name: laravel_sandbox_mysql
+    container_name: docker-laravel_mysql
     ports:
       - '3306:3306'
     volumes:
@@ -23,7 +23,7 @@ services:
 
   redis:
     image: redis:7
-    container_name: laravel_sandbox_redis
+    container_name: docker-laravel_redis
     ports:
       - 6379:6379
     volumes:
@@ -32,4 +32,4 @@ services:
 
 networks:
   default:
-    name: laravel_sandbox
+    name: docker-laravel

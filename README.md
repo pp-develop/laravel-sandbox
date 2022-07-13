@@ -1,6 +1,6 @@
 ## laravel-sandbox
 ## Usage
-run your containers
+create and start containers
 ```
 $ docker-compose up -d
 ```

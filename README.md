@@ -1,37 +1,41 @@
-## laravel-sandbox
+## docker-laravel
 ## Usage
-create and start containers
-```
-$ docker-compose up -d
-```
-start local development server
-```
-$ docker exec -it laravel_sandbox_php bash
-$ php artisan serve --host=0.0.0.0 --port=8000
-```
+1. create and start containers
+    ```
+    $ docker-compose up -d
+    ```
+2. create a new Laravel project
+    ```
+    $ docker exec -it docker_laravel_php bash
+    $ composer create-project laravel/laravel .
+    ```
+3. start local development server  
+    ```
+    $ php artisan serve --host=0.0.0.0 --port=8000
+    ```
 
 ## Features
 ### xdebug setting for VSCode
+1. install [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
+2. setting `.vscode/launch.json`
 
-install [PHP Debug](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug)
-
-/.vscode/launch.json
-```
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Listen for Xdebug",
-            "type": "php",
-            "request": "launch",
-            "port": 9003,
-            "pathMappings": {
-                "/var/www/html/": "${workspaceRoot}/"
-            }
-        },
-    ]
-}
-```
+    /.vscode/launch.json
+    ```
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Listen for Xdebug",
+                "type": "php",
+                "request": "launch",
+                "port": 9003,
+                "pathMappings": {
+                    "/var/www/html/": "${workspaceRoot}/src/"
+                }
+            },
+        ]
+    }
+    ```
 Referens  
 launch.json attribute  
 https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes  
@@ -44,4 +48,4 @@ https://xdebug.org/docs/all_settings
 1. Ctrl+Shift+D
 2. ▶︎(RUN) 「Listen for Xdebug」 selection
 3. Set a breakpoint on any line
-4. Shift+F5 debag start
+4. F5 or ▶︎ click to debag start

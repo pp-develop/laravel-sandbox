@@ -8,13 +8,13 @@ services:
       - ./src:/var/www/html
       - ./dockerfile/php/php.ini:/usr/local/etc/php/php.ini
     ports:
-      - '8000:8000'
+      - 8000:8000
 
   mysql:
     image: mysql:8
     container_name: docker_laravel_mysql
     ports:
-      - '3306:3306'
+      - 3306:3306
     volumes:
       - ./db:/var/lib/mysql
     environment:

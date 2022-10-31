@@ -7,12 +7,11 @@
 2. create a new Laravel project
     ```
     $ docker exec -it docker_laravel_php bash
-    $ rm .gitkeep
     $ composer create-project laravel/laravel .
     ```
 3. start local development server  
     ```
-    $ php artisan serve --host=0.0.0.0 --port=8000
+    $ php artisan serve --host=0.0.0.0 --port=80
     ```
     accsess local development server http://localhost:8000/
 

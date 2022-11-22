@@ -13,7 +13,7 @@
     ```
     $ php artisan serve --host=0.0.0.0 --port=80
     ```
-    accsess local development server http://localhost:8000/
+    accsess local development server http://localhost:80
 
 ## Debug
 ### xdebug setting for VSCode

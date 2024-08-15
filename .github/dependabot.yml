@@ -9,3 +9,11 @@ updates:
     directory: "/dockerfile/php" # Location of package manifests
     schedule:
       interval: "daily"
+  - package-ecosystem: "docker" # See documentation for possible values
+    directory: "/dockerfile/mysql" # Location of package manifests
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker" # See documentation for possible values
+    directory: "/dockerfile/redis" # Location of package manifests
+    schedule:
+      interval: "daily"

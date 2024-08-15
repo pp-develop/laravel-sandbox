@@ -1,8 +1,9 @@
 version: '3.9'
 services:
   php:
-    image: php:v1
-    build: ./dockerfile/php
+    build:
+      context: ./dockerfile/php
+      dockerfile: Dockerfile
     container_name: docker_laravel_php
     volumes:
       - ./src:/var/www/html
@@ -11,7 +12,9 @@ services:
       - 80:80
 
   mysql:
-    image: mysql:8
+    build:
+      context: ./dockerfile/mysql
+      dockerfile: Dockerfile
     container_name: docker_laravel_mysql
     ports:
       - 3306:3306
@@ -22,7 +25,9 @@ services:
       MYSQL_DATABASE: sandbox
 
   redis:
-    image: redis:7
+    build:
+      context: ./dockerfile/redis
+      dockerfile: Dockerfile
     container_name: docker_laravel_redis
     ports:
       - 6379:6379
